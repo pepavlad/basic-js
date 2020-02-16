@@ -1,7 +1,7 @@
 module.exports = function transform(arr) {
     if(!Array.isArray(arr)){
         throw 'Error';
-    }
+    } else if (arr == []) return [];
     for(let i = 0; i < arr.length; i++){
         if(arr[i] == '--discard-next') arr.splice(i, 2);
         if(arr[i] == '--discard-prev') arr.splice(i, -2);
